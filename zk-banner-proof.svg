@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 240" width="840" height="240" role="img" aria-label="A prover keeps a private witness masked, sends only a small proof across a boundary, and the verifier accepts without seeing the witness.">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#8b949e;text-anchor:middle}
+.lab{font-size:20px;letter-spacing:3px}
+.cell{fill:#30363d;stroke:#484f58;stroke-width:1.5;animation:cell 8s ease-in-out infinite backwards}
+.bound{stroke:#484f58;stroke-width:2;stroke-dasharray:6 8}
+.proof{animation:proof 8s ease-in-out infinite}
+.proof rect{fill:#a371f7}
+.proof text{fill:#0d1117;font-size:26px;font-weight:700}
+.ring{fill:none;stroke:#3fb950;stroke-width:5;animation:ring 8s linear infinite}
+.idle{fill:none;stroke:#484f58;stroke-width:3}
+.tick{fill:none;stroke:#3fb950;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:0;animation:tick 8s ease-out infinite}
+.ok{fill:#3fb950;font-size:20px;letter-spacing:3px;animation:ok 8s linear infinite}
+@keyframes cell{0%,3%{fill:#30363d}10%,24%{fill:#a371f7}32%,100%{fill:#30363d}}
+@keyframes proof{0%,24%{transform:translate(-300px,0) scale(1);opacity:0}32%{transform:translate(-300px,0);opacity:1}66%{transform:translate(0,0);opacity:1}72%,100%{transform:translate(0,0);opacity:0}}
+@keyframes ring{0%,66%{opacity:0}72%,94%{opacity:1}100%{opacity:0}}
+@keyframes tick{0%,70%{stroke-dashoffset:80;opacity:1}78%,94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes ok{0%,76%{opacity:0}80%,94%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cell,.proof,.ring,.tick,.ok{animation:none}.proof{opacity:0}}
+</style>
+<rect width="840" height="240" rx="12" fill="#0d1117"/>
+<text class="lab" x="181" y="42">PROVER</text>
+<text class="lab" x="660" y="42">VERIFIER</text>
+<rect class="cell" style="animation-delay:0.00s" x="112" y="66" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.07s" x="158" y="66" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.14s" x="204" y="66" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.21s" x="112" y="112" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.28s" x="158" y="112" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.35s" x="204" y="112" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.42s" x="112" y="158" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.49s" x="158" y="158" width="38" height="38" rx="5"/>
+<rect class="cell" style="animation-delay:0.56s" x="204" y="158" width="38" height="38" rx="5"/>
+<line class="bound" x1="420" y1="24" x2="420" y2="216"/>
+<circle class="idle" cx="660" cy="118" r="50"/>
+<circle class="ring" cx="660" cy="118" r="50"/>
+<path class="tick" d="M636 119 L653 136 L686 100"/>
+<text class="ok" x="660" y="204">ACCEPT</text>
+<g class="proof"><rect x="552" y="96" width="44" height="44" rx="8"/><text x="574" y="127">π</text></g>
+</svg>
